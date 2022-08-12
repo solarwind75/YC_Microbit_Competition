@@ -1,18 +1,37 @@
-input.onButtonPressed(Button.A, function () {
-    animatedHeartbeat()
-})
-function animatedHeartbeat () {
-    for (let index = 0; index < 4; index++) {
-        basic.showIcon(IconNames.Heart)
-        basic.pause(200)
-        basic.showIcon(IconNames.SmallHeart)
-        basic.pause(500)
-        basic.clearScreen()
+function fizzBuzz (list: number[]) {
+    for (let index = 0; index <= list.length - 1; index++) {
+        readVal = list[index]
+        if (readVal % 15 == 0) {
+            basic.showString("FizzBuzz")
+        } else {
+            if (readVal % 3 == 0) {
+                basic.showString("Fizz")
+            } else {
+                if (readVal % 5 == 0) {
+                    basic.showString("Buzz")
+                } else {
+                    basic.showNumber(readVal)
+                }
+            }
+        }
     }
 }
-let list = [0, 1, 2]
-let text_list = ["a", "b", "c"]
-music.playMelody("E B C5 A B G A F ", 120)
-basic.forever(function () {
-	
-})
+let readVal = 0
+let list = [
+1,
+57,
+28,
+47,
+13,
+21,
+97,
+76,
+38,
+19,
+32,
+87,
+0,
+58,
+71
+]
+fizzBuzz(list)

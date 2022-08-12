@@ -1,5 +1,5 @@
 {
-    "name": "test",
+    "name": "FizzBuzz",
     "description": "",
     "dependencies": {
         "core": "*",
